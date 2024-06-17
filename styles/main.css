@@ -1,6 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+nav {
+  background-color: pink;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  height: 100vh;
+}
+
+.about {
+  background-color: aquamarine;
+}
+
+.projects {
+  background-color: bisque;
+}
+
+.experience {
+  background-color: aqua;
+}
 .experience .job img {
   width: 200px;
 }
 .experience .job .job-descript {
   width: 400px;
+}
+
+.interests {
+  background-color: lavender;
+}
+
+.contact {
+  background-color: tomato;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .socials-wrapper {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */
