@@ -1,29 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/main.css">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='styles/main.css'>
   <title>Document</title>
 </head>
 
 <body>
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'></script>
+  <script src='./scripts/main.js'></script>
+
   <header>
-    <nav>
-      <a href="#home"><img src="/home.png" alt="home icon">Home</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+    <nav class='top-bar'>
+      <a href='#home'><img src='/home.png' alt='home icon'>Home</a>
+      <ul class='nav-links'>
+        <li><a href='#about'>About</a></li>
+        <li><a href='#projects'>Projects</a></li>
+        <li><a href='#experience'>Experience</a></li>
+        <li><a href='#interests'>Interests</a></li>
+        <li><a href='#contacts'>Contacts</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="about">
+    <section class='hero'>
+      <div class="hero-image">
+        <h2>Cassie Lee</h2>
+      </div>
+    </section>
+    <section class='about'>
       <h2>Something About Me</h2>
       <p>
         The prospect of gaining insight into meticulous systems and creating anew have always ignited a longstanding
@@ -39,7 +48,7 @@
       </p>
     </section>
 
-    <section class="projects">
+    <section class='projects'>
       <h2>Projects</h2>
       <div>
         <h3>Aesthete</h3>
@@ -75,28 +84,28 @@
       </div>
     </section>
 
-    <section class="experience">
+    <section class='experience'>
       <h2>Experience</h2>
-      <div class="job">
+      <div class='job'>
         <div>
-          <img src="assets/ga-logo.png" alt="general assembly logo">
-          <div class="job-descript">
+          <img src='assets/ga-logo.png' alt='general assembly logo'>
+          <div class='job-descript'>
             Bacon ipsum dolor amet ipsum beef laborum nisi fatback deserunt. Ex non ut, beef tail doner esse elit
             buffalo landjaeger ea boudin tenderloin. Ipsum lorem capicola tongue jowl chislic do bacon meatball commodo.
             Pariatur landjaeger drumstick ut, frankfurter turducken deserunt non est pork chop quis meatloaf.
           </div>
         </div>
       </div>
-      <div class="job">
-        <div class="job-descript">
+      <div class='job'>
+        <div class='job-descript'>
           Bacon ipsum dolor amet ipsum beef laborum nisi fatback deserunt. Ex non ut, beef tail doner esse elit buffalo
           landjaeger ea boudin tenderloin. Ipsum lorem capicola tongue jowl chislic do bacon meatball commodo. Pariatur
           landjaeger drumstick ut, frankfurter turducken deserunt non est pork chop quis meatloaf.
         </div>
       </div>
-      <div class="job">
-        <img src="assets/imperial-logo.png" alt="imperial college logo">
-        <div class="job-descript">
+      <div class='job'>
+        <img src='assets/imperial-logo.png' alt='imperial college logo'>
+        <div class='job-descript'>
           Bacon ipsum dolor amet ipsum beef laborum nisi fatback deserunt. Ex non ut, beef tail doner esse elit buffalo
           landjaeger ea boudin tenderloin. Ipsum lorem capicola tongue jowl chislic do bacon meatball commodo. Pariatur
           landjaeger drumstick ut, frankfurter turducken deserunt non est pork chop quis meatloaf.
@@ -104,28 +113,28 @@
       </div>
     </section>
 
-    <section class="interests">
+    <section class='interests'>
       <h2>Interests</h2>
     </section>
 
-    <section class="contact">
+    <section class='contact'>
       <h2>Contacts</h2>
-      <!-- <div class="form-wrapper"> -->
+      <!-- <div class='form-wrapper'> -->
         <!-- <h3>Send Me A Message</h3>
         <form>
-          <label for="">Email Address</label>
-          <input type="email">
-          <label for="">Topic</label>
-          <input type="text">
-          <label for="">Message</label>
-          <input type="text">
-          <button type="submit">Send Message</button>
+          <label for=''>Email Address</label>
+          <input type='email'>
+          <label for=''>Topic</label>
+          <input type='text'>
+          <label for=''>Message</label>
+          <input type='text'>
+          <button type='submit'>Send Message</button>
         </form> -->
-        <div class="socials-wrapper">
-          <a href="mailto:cassie.lee1023@gmail.com"><img src="/email.png" alt="email logo"></a>
-          <a href="#github"><img src="/github.png" alt="github logo"></a>
-          <a href="#linkedin"><img src="/linkedin.png" alt="linkedin logo"></a>
-          <a href="#instagram"><img src="/instagram.png" alt="instagram logo"></a>
+        <div class='socials-wrapper'>
+          <a href='mailto:cassie.lee1023@gmail.com'><img src='/email.png' alt='email logo'></a>
+          <a href='#github'><img src='/github.png' alt='github logo'></a>
+          <a href='#linkedin'><img src='/linkedin.png' alt='linkedin logo'></a>
+          <a href='#instagram'><img src='/instagram.png' alt='instagram logo'></a>
         </div>
       <!-- </div> -->
     </section>
