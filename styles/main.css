@@ -11,16 +11,22 @@
   font-family: "Saint";
   src: url("../assets/Saint Regular.ttf");
 }
+:root {
+  --bg-color: #2e2b2b;
+  --green: rgb(51, 255, 187);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 .top-bar {
-  background-color: pink;
+  background-color: var(--green);
   width: 100%;
   height: 80px;
   position: fixed;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   left: 0;
@@ -40,6 +46,10 @@ section {
   height: 100vh;
 }
 
+.hero {
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
 .hero .hero-image {
   height: 100%;
   display: flex;
@@ -54,6 +64,36 @@ section {
   font-family: "Saint";
   font-size: 2.5em;
   color: white;
+}
+
+.transition {
+  position: relative;
+  max-width: 1920px;
+  height: 800px;
+}
+.transition .layer {
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+}
+
+.matrix-3 {
+  background-image: url("../assets/matrix3.png");
+  position: absolute;
+  z-index: 0;
+}
+
+.matrix-2 {
+  background-image: url("../assets/matrix2.png");
+  position: absolute;
+  z-index: 1;
+}
+
+.matrix-1 {
+  background-image: url("../assets/matrix1.png");
+  z-index: 2;
 }
 
 .about {
