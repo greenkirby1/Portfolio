@@ -9,21 +9,31 @@
   <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script type='module' src='./scripts/main.js' defer></script>
-  <title>Document</title>
+  <title>Cassie Lee | Junior Developer</title>
 </head>
 
 <body>
 
   <header>
     <nav class='top-bar'>
-      <a href='#home'><img src='/home.png' alt='home icon'>Home</a>
-      <ul class='nav-links'>
-        <li><a href='#about'>About</a></li>
-        <li><a href='#projects'>Projects</a></li>
-        <li><a href='#experience'>Experience</a></li>
-        <li><a href='#interests'>Interests</a></li>
-        <li><a href='#contacts'>Contacts</a></li>
-      </ul>
+      <button value='hero'>Home</button>
+      <div class="nav-wrapper">
+        <button value='about'>About</button>
+        <button value='projects'>Projects</button>
+        <button value='experience'>Experience</button>
+        <button value='interests'>Interests</button>
+        <button value='contacts'>Contacts</button>
+      </div>
+    </nav>
+
+    <nav class='small-nav'>
+      <button value='hero'>Home</button>
+      <div class="nav-wrapper">
+        <button value='about'>About</button>
+        <button value='projects'>Projects</button>
+        <button value='experience'>Experience</button>
+        <button value='interests'>Interests</button>
+        <button value='contacts'>Contacts</button>
     </nav>
   </header>
 
@@ -33,9 +43,9 @@
         <h2>Cassie Lee</h2>
       </div>
       <div class='transition'>
-        <div class='matrix-3 layer parallax' data-speed='0.5'></div>
-        <div class='matrix-2 layer parallax' data-speed='0.25'></div>
-        <div class='matrix-1 layer parallax' data-='0'></div>
+        <div class='matrix-3 layer' data-speed='0.5'></div>
+        <div class='matrix-2 layer' data-speed='0.25'></div>
+        <div class='matrix-1 layer' data-='0'></div>
       </div>
     </section>
 
@@ -124,7 +134,7 @@
       <h2>Interests</h2>
     </section>
 
-    <section class='contact'>
+    <section class='contacts'>
       <h2>Contacts</h2>
       <!-- <div class='form-wrapper'> -->
       <!-- <h3>Send Me A Message</h3>

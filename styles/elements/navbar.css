@@ -1,0 +1,45 @@
+.top-bar {
+  background-color: var(--green);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  transition: ease 0.4s;
+}
+.top-bar .nav-wrapper {
+  display: flex;
+}
+.top-bar button {
+  font-family: "Fablab";
+  font-size: 2vmin;
+  border-radius: 10px;
+  height: 5vmin;
+  padding: 1.5vmin;
+  background-color: #bdffd1;
+  border: 2.5px solid #67a563;
+  transition: transform 0.5s;
+}
+.top-bar--scrolled {
+  height: 50px;
+}
+.top-bar--scrolled button {
+  height: 1.5vmin;
+  display: flex;
+  align-items: center;
+  transform: scale(0.8);
+}
+
+.small-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .top-bar {
+    display: none;
+  }
+}/*# sourceMappingURL=navbar.css.map */

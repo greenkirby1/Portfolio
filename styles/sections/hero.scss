@@ -1,0 +1,51 @@
+.hero {
+  overflow: hidden;
+  background-color: var(--bg-color);
+  .hero-image {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/portfolio-hero.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    h2 {
+      font-family: 'Saint';
+      font-size: 2.5em;
+      color: white;
+    }
+  }
+}
+
+.transition {
+  position: relative;
+  // overflow: hidden;
+  max-width: 1920px;
+  height: var(--height);
+  .layer {
+    background-position: top center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: var(--height);
+  }
+}
+
+.matrix-3 {
+  background-image: url('../assets/matrix3.png');
+  position: absolute;
+  z-index: 0;
+}
+
+.matrix-2 {
+  background-image: url('../assets/matrix2.png');
+  position: absolute;
+  z-index: 1;
+}
+
+.matrix-1 {
+  background-image: url('../assets/matrix1.png');
+  z-index: 2;
+}
