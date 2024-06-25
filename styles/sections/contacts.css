@@ -1,0 +1,12 @@
+.contacts {
+  background-color: tomato;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacts .socials-wrapper {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=contacts.css.map */

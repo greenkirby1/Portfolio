@@ -1,0 +1,10 @@
+.experience {
+  background-color: aqua;
+  font-family: "Combine";
+}
+.experience .job img {
+  width: 200px;
+}
+.experience .job .job-descript {
+  width: 400px;
+}/*# sourceMappingURL=experience.css.map */

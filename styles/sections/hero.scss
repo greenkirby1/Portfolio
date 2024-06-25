@@ -34,18 +34,25 @@
 }
 
 .matrix-3 {
-  background-image: url('../assets/matrix3.png');
+  background-image: url('../assets/matrix-3.png');
   position: absolute;
   z-index: 0;
+  background-position-y: 40px !important;
 }
 
 .matrix-2 {
-  background-image: url('../assets/matrix2.png');
+  background-image: url('../assets/matrix-2.png');
   position: absolute;
   z-index: 1;
 }
 
 .matrix-1 {
-  background-image: url('../assets/matrix1.png');
+  background-image: url('../assets/matrix-1.png');
   z-index: 2;
+}
+
+@media only screen and (max-width: 1000px) {
+  .layer {
+    background-size: 120% !important;
+  }
 }

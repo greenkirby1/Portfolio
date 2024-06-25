@@ -1,0 +1,57 @@
+.hero {
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+.hero .hero-image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/portfolio-hero.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero .hero-image h2 {
+  font-family: "Saint";
+  font-size: 2.5em;
+  color: white;
+}
+
+.transition {
+  position: relative;
+  max-width: 1920px;
+  height: var(--height);
+}
+.transition .layer {
+  background-position: top center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: var(--height);
+}
+
+.matrix-3 {
+  background-image: url("../assets/matrix-3.png");
+  position: absolute;
+  z-index: 0;
+  background-position-y: 40px !important;
+}
+
+.matrix-2 {
+  background-image: url("../assets/matrix-2.png");
+  position: absolute;
+  z-index: 1;
+}
+
+.matrix-1 {
+  background-image: url("../assets/matrix-1.png");
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1000px) {
+  .layer {
+    background-size: 120% !important;
+  }
+}/*# sourceMappingURL=hero.css.map */
