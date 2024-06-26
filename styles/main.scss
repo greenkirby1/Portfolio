@@ -1,4 +1,4 @@
-@use 'elements/fonts';
+@use 'elements/library';
 @use 'elements/navbar';
 @use 'sections/hero';
 @use 'sections/about';
@@ -7,21 +7,3 @@
 @use 'sections/interests';
 @use 'sections/contacts';
 @import url('https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap');
-
-:root {
-  --bg-color: #2e2b2b;
-  --green: rgb(51, 255, 187);
-  --border-green: #67a563;
-  --btn-color: #bdffd1;
-  --height: 800px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-section {
-  height: 100vh;
-}
-

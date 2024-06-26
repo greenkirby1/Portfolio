@@ -1,31 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap");
-@font-face {
-  font-family: "Louise Regular";
-  src: url("../assets/Louise-Regular.otf");
+:root {
+  --bg-color: #2e2b2b;
+  --green: rgb(51, 255, 187);
+  --border-green: #67a563;
+  --btn-color: #bdffd1;
+  --height: 800px;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 @font-face {
-  font-family: "Combine";
-  src: url("../assets/Combine.otf");
+  font-family: "Picnic";
+  src: url("../../assets/PicNic-Regular.otf");
 }
 @font-face {
   font-family: "Saint";
-  src: url("../assets/Saint Regular.ttf");
+  src: url("../../assets/Saint Regular.ttf");
 }
 @font-face {
   font-family: "Milkman";
-  src: url("../assets/milkman.ttf");
-}
-@font-face {
-  font-family: "New Heterodox Mono Book";
-  src: url("../assets/NewHeterodoxMono-Book.otf");
-}
-@font-face {
-  font-family: "New Heterodox Mono Bold";
-  src: url("../assets/NewHeterodoxMono-Bold.otf");
+  src: url("../../assets/milkman.ttf");
 }
 @font-face {
   font-family: "Fablab";
-  src: url("../assets/Fablab.ttf");
+  src: url("../../assets/Fablab.ttf");
+}
+@font-face {
+  font-family: "Trickster";
+  src: url("../../assets/Trickster-Reg.otf");
+}
+@font-face {
+  font-family: "Honey Demo";
+  src: url("../../assets/HoneyDemo-Light.otf");
+}
+@font-face {
+  font-family: "Monor Reg";
+  src: url("../../assets/Monor_Regular.otf");
+}
+@font-face {
+  font-family: "Monor Bold";
+  src: url("../../assets/monor-bold.otf");
 }
 .big-nav {
   background-color: var(--green);
@@ -45,17 +62,14 @@
 }
 .big-nav button {
   font-family: "Fablab";
-  font-size: 2vmin;
+  font-size: 1.2rem;
   border-radius: 10px;
-  height: 5vmin;
-  padding: 1.5vmin;
+  height: 3rem;
+  padding: 0.8rem;
   background-color: var(--btn-color);
   border: 2.5px solid var(--border-green);
   margin: 0 15px;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: border 0.1s linear;
-  transition: background-color 0.1s linear;
-  transition: color 0.1s linear;
+  transition: box-shadow 0.3s ease-in-out, border 0.05s linear, background-color 0.05s linear, color 0.05s linear;
 }
 .big-nav button:hover {
   box-shadow: 0px 5px 0px var(--border-green);
@@ -64,9 +78,10 @@
   height: 50px;
 }
 .big-nav--scrolled button {
-  height: 1.5vmin;
+  height: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .small-nav {
@@ -88,6 +103,10 @@
   height: 80px;
   width: 100%;
 }
+.small-nav .navbar .drop-menu {
+  position: absolute;
+  right: 15px;
+}
 .small-nav .small-nav-wrapper {
   display: none;
   flex-direction: column;
@@ -95,15 +114,20 @@
   align-items: center;
   background-color: var(--green);
   width: 100%;
-  height: 300px;
+  height: 420px;
   border-top: 2.5px solid black;
+}
+.small-nav .small-nav-wrapper button {
+  margin: 0.5rem;
+  width: 190px;
+  text-align: center;
 }
 .small-nav button, .small-nav .drop-menu {
   font-family: "Fablab";
-  font-size: 2vmin;
+  font-size: 1.2rem;
   border-radius: 10px;
-  height: 5vmin;
-  padding: 1.5vmin;
+  height: 3rem;
+  padding: 0.8rem;
   background-color: var(--btn-color);
   border: 2.5px solid var(--border-green);
   transition: box-shadow 0.3s ease-in-out;
@@ -131,6 +155,7 @@
   }
 }
 .hero {
+  height: 100vh;
   overflow: hidden;
   background-color: var(--bg-color);
 }
@@ -144,12 +169,68 @@
   background-position: center;
   background-size: cover;
 }
-.hero .hero-image h2 {
-  font-family: "Saint";
-  font-size: 2.5em;
+.hero .hero-image .hero-title {
+  height: 60vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   color: white;
+  text-align: center;
+}
+.hero .hero-image .hero-title .title-wrapper {
+  margin-bottom: 5rem;
+}
+.hero .hero-image .hero-title .title-wrapper h2 {
+  font-family: "Picnic";
+  font-size: 5rem;
+  margin-bottom: 1.2rem;
+}
+.hero .hero-image .hero-title .title-wrapper h3 {
+  font-family: "Fablab";
+  font-size: 1.4rem;
+}
+.hero .hero-image .hero-title .title-wrapper p {
+  font-family: "Monor Bold";
+  font-size: 1.2rem;
+  color: rgb(0, 255, 128);
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows {
+  font: bold 1.5rem monospace;
+  font-stretch: expanded;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows #arrow-1 {
+  animation: appear-first 1s infinite;
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows #arrow-2 {
+  animation: appear-second 1s infinite;
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
 }
 
+@keyframes appear-first {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes appear-second {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
 .transition {
   position: relative;
   max-width: 1920px;
@@ -188,12 +269,67 @@
   }
 }
 .about {
-  background-color: aquamarine;
-  font-family: "Almendra Display", serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--bg-color);
+  font-family: "Monor Reg", serif;
   font-weight: bold;
-  font-size: 2em;
+}
+.about .about-wrapper {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vmin;
+}
+.about .about-wrapper h2, .about .about-wrapper h3 {
+  font-family: "Monor Bold", monospace;
+  font-size: 2rem;
+  color: aqua;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about .about-wrapper h2 .caret, .about .about-wrapper h3 .caret {
+  color: white;
+  animation: flash 1s infinite;
+}
+.about .about-wrapper .tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(600px + 6rem);
+  justify-content: center;
+  align-items: center;
+}
+.about .about-wrapper .tech-list .skill {
+  width: calc(100px + 1rem);
+  height: calc(100px + 2rem);
+  text-align: center;
+}
+.about .about-wrapper .tech-list .skill i {
+  font-size: 3.5rem;
+}
+.about .about-wrapper .tech-list .skill h4 {
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
 }
 
+@keyframes flash {
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+}
 .projects {
   background-color: bisque;
   font-family: "Louise Regular";
@@ -225,21 +361,4 @@
 .contacts .socials-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-:root {
-  --bg-color: #2e2b2b;
-  --green: rgb(51, 255, 187);
-  --border-green: #67a563;
-  --btn-color: #bdffd1;
-  --height: 800px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-section {
-  height: 100vh;
 }/*# sourceMappingURL=main.css.map */

@@ -16,17 +16,14 @@
 }
 .big-nav button {
   font-family: "Fablab";
-  font-size: 2vmin;
+  font-size: 1.2rem;
   border-radius: 10px;
-  height: 5vmin;
-  padding: 1.5vmin;
+  height: 3rem;
+  padding: 0.8rem;
   background-color: var(--btn-color);
   border: 2.5px solid var(--border-green);
   margin: 0 15px;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: border 0.05s linear;
-  transition: background-color 0.05s linear;
-  transition: color 0.05s linear;
+  transition: box-shadow 0.3s ease-in-out, border 0.05s linear, background-color 0.05s linear, color 0.05s linear;
 }
 .big-nav button:hover {
   box-shadow: 0px 5px 0px var(--border-green);
@@ -35,9 +32,10 @@
   height: 50px;
 }
 .big-nav--scrolled button {
-  height: 1.5vmin;
+  height: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .small-nav {
@@ -59,6 +57,10 @@
   height: 80px;
   width: 100%;
 }
+.small-nav .navbar .drop-menu {
+  position: absolute;
+  right: 15px;
+}
 .small-nav .small-nav-wrapper {
   display: none;
   flex-direction: column;
@@ -66,15 +68,20 @@
   align-items: center;
   background-color: var(--green);
   width: 100%;
-  height: 300px;
+  height: 420px;
   border-top: 2.5px solid black;
+}
+.small-nav .small-nav-wrapper button {
+  margin: 0.5rem;
+  width: 190px;
+  text-align: center;
 }
 .small-nav button, .small-nav .drop-menu {
   font-family: "Fablab";
-  font-size: 2vmin;
+  font-size: 1.2rem;
   border-radius: 10px;
-  height: 5vmin;
-  padding: 1.5vmin;
+  height: 3rem;
+  padding: 0.8rem;
   background-color: var(--btn-color);
   border: 2.5px solid var(--border-green);
   transition: box-shadow 0.3s ease-in-out;

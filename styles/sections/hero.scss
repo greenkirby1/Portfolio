@@ -1,6 +1,8 @@
 .hero {
+  height: 100vh;
   overflow: hidden;
   background-color: var(--bg-color);
+
   .hero-image {
     height: 100%;
     display: flex;
@@ -10,11 +12,81 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    h2 {
-      font-family: 'Saint';
-      font-size: 2.5em;
+
+    .hero-title {
+      height: 60vmin;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       color: white;
+      text-align: center;
+
+      .title-wrapper {
+        margin-bottom: 5rem;
+
+        h2 {
+          font-family: 'Picnic';
+          font-size: 5rem;
+          margin-bottom: 1.2rem;
+        }
+
+        h3 {
+          font-family: 'Fablab';
+          font-size: 1.4rem;
+        }
+
+        p {
+          font-family: 'Monor Bold';
+          font-size: 1.2rem;
+          color: rgb(0, 255, 128);
+          text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+        }
+
+        .arrows {
+          font: bold 1.5rem monospace;
+          font-stretch: expanded;
+
+          #arrow-1 {
+            animation: appear-first 1s infinite;
+            text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+          }
+
+          #arrow-2 {
+            animation: appear-second 1s infinite;
+            text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes appear-first {
+  0% {
+    visibility: visible;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes appear-second {
+  0% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
   }
 }
 
@@ -23,6 +95,7 @@
   // overflow: hidden;
   max-width: 1920px;
   height: var(--height);
+
   .layer {
     background-position: top center;
     background-size: 60%;
@@ -50,6 +123,9 @@
   background-image: url('../assets/matrix-1.png');
   z-index: 2;
 }
+
+
+
 
 @media only screen and (max-width: 1000px) {
   .layer {

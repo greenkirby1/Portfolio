@@ -1,130 +1,138 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
+function init() {
+  
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-const dropMenuBtn = document.querySelector('.drop-menu')
-const hiddenMenu = document.querySelector('.small-nav-wrapper')
-const btns = document.querySelectorAll('button')
-const sections = document.querySelectorAll('section')
-// const home = document.querySelector('.hero')
-// const about = document.querySelector('.about')
-// const projects = document.querySelector('.projects')
-// const experience = document.querySelector('.experience')
-// const interests = document.querySelector('.interests')
-// const contacts = document.querySelector('.contacts')
+  const dropMenuBtn = document.querySelector('.drop-menu')
+  const hiddenMenu = document.querySelector('.small-nav-wrapper')
+  const btns = document.querySelectorAll('button')
+  const sections = document.querySelectorAll('section')
+  // const home = document.querySelector('.hero')
+  // const about = document.querySelector('.about')
+  // const projects = document.querySelector('.projects')
+  // const experience = document.querySelector('.experience')
+  // const interests = document.querySelector('.interests')
+  // const contacts = document.querySelector('.contacts')
 
-// * nav-bar animation
-ScrollTrigger.create({
-  start: 'top -80',
-  end: 99999,
-  toggleClass: {
-    className: 'big-nav--scrolled',
-    targets: '.big-nav'
-  }
-})
+  // * nav-bar animation
+  ScrollTrigger.create({
+    start: 'top -80',
+    end: 99999,
+    toggleClass: {
+      className: 'big-nav--scrolled',
+      targets: '.big-nav'
+    }
+  })
 
 
-// * hero image animation
-const tl = gsap.timeline()
+  // * hero image animation
+  const tl = gsap.timeline()
 
-// const layers = gsap.utils.toArray('.layer')
-// console.log(layers)
+  // const layers = gsap.utils.toArray('.layer')
+  // console.log(layers)
 
-tl
-  .to('.transition', {
+  tl
+    .to('.transition', {
+      scrollTrigger: {
+        trigger: '.hero',
+        start: 'top top',
+        end: 'bottom center',
+        pin: true,
+        scrub: 0.8,
+      },
+      yPercent: -100,
+      ease: 'none',
+    })
+    .to('.hero-image', {
+      scrollTrigger: {
+        trigger: '.hero-image',
+        start: 'bottom 600px',
+        end: '+=80%',
+        scrub: 0.8,
+        // markers: true
+      },
+      duration: 5,
+      opacity: 0,
+    })
+
+  const transitionTl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
+      trigger: '.transition',
+      start: 'top 600px',
       end: 'bottom center',
-      pin: true,
-      scrub: 0.8,
-    },
-    yPercent: -100,
-    ease: 'none',
-  })
-  .to('.hero-image', {
-    scrollTrigger: {
-      trigger: '.hero-image',
-      start: 'bottom 600px',
-      end: '+=80%',
-      scrub: 0.8,
+      scrub: true,
       // markers: true
-    },
-    duration: 5,
-    opacity: 0,
+    }
   })
 
-const transitionTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.transition',
-    start: 'top 600px',
-    end: 'bottom center',
-    scrub: true,
-    // markers: true
-  }
-})
-
-transitionTl
-  .to('.matrix-3', {
-    yPercent: 25,
-    ease: 'power1.out'
-  })
-  .to('.matrix-2', {
-    yPercent: 15,
-    ease: 'power1.out'
-  })
+  transitionTl
+    .to('.matrix-3', {
+      yPercent: 25,
+      ease: 'power1.out'
+    })
+    .to('.matrix-2', {
+      yPercent: 15,
+      ease: 'power1.out'
+    })
 
 
-// * navigation animation
-const navBtns = gsap.utils.toArray('nav button')
+  // * navigation animation
+  const navBtns = gsap.utils.toArray('nav button')
 
-navBtns.forEach(btn => {
-  btn.addEventListener('click', e => {
-    hiddenMenu.classList.remove('open')
-    // btns.forEach(btn => btn.classList.remove('active'))
-    // btn.classList.add('active')
-    if (e.target.value === 'hero') {
-      tl.to('.transition', {
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+      hiddenMenu.classList.remove('open')
+      if (e.target.value === 'hero') {
+        tl.to('.transition', {
+
+        })
+      }
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: {
+          y: `.${e.target.value}`,
+          offsetY: () => e.target.value === 'hero' ? 'top top'
+            : (window.innerWidth > 1020 ? 50 : 80)
+        },
 
       })
-    }
-    gsap.to(window, {
-      duration: 0.5,
-      scrollTo: {
-        y: `.${e.target.value}`,
-        offsetY: () => e.target.value === 'hero' ? 'top top' 
-          : (window.innerWidth > 1020 ? 50 : 80)
-      },
-      
     })
   })
-})
 
-function openMenu() {
-  if (hiddenMenu.classList.contains('open')) {
-    hiddenMenu.classList.remove('open')
-    console.log('menu opened')
-  } else {
-    hiddenMenu.classList.add('open')
-    console.log('menu closed')
+  function openMenu() {
+    if (hiddenMenu.classList.contains('open')) {
+      hiddenMenu.classList.remove('open')
+      dropMenuBtn.classList.remove('active')
+      // console.log('menu opened')
+    } else {
+      hiddenMenu.classList.add('open')
+      dropMenuBtn.classList.add('active')
+      // console.log('menu closed')
+    }
   }
+
+  function sectionChange() {
+    let current
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop
+      const sectionHeight = section.clientHeight
+      // console.log(sectionTop, sectionHeight)
+      // console.log(scrollY)
+      if (scrollY >= (sectionTop - sectionHeight / 5)) {
+        current = section.getAttribute('class')
+        // console.log(current)
+      }
+    })
+    btns.forEach(btn => {
+      dropMenuBtn.classList.remove('active')
+      btn.classList.remove('active')
+      if (btn.getAttribute('value') === current) {
+        btn.classList.add('active')
+      }
+    })
+  }
+
+  dropMenuBtn.addEventListener('click', openMenu)
+  window.addEventListener('scroll' || 'click', sectionChange)
 }
 
-dropMenuBtn.addEventListener('click', openMenu)
-window.addEventListener('scroll' || 'click', () => {
-  let current
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.clientHeight
-    // console.log(sectionTop, sectionHeight)
-    if (scrollY >= (sectionTop - sectionHeight/4)) {
-      current = section.getAttribute('class')
-      console.log(current)
-    }
-  })
-  btns.forEach(btn => {
-    btn.classList.remove('active')
-    if (btn.getAttribute('value') === current) {
-      console.log(true)
-      btn.classList.add('active')
-    }
-  })
-})
+window.addEventListener('DOMContentLoaded', init)

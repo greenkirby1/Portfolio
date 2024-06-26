@@ -1,4 +1,5 @@
 .hero {
+  height: 100vh;
   overflow: hidden;
   background-color: var(--bg-color);
 }
@@ -12,12 +13,68 @@
   background-position: center;
   background-size: cover;
 }
-.hero .hero-image h2 {
-  font-family: "Saint";
-  font-size: 2.5em;
+.hero .hero-image .hero-title {
+  height: 60vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   color: white;
+  text-align: center;
+}
+.hero .hero-image .hero-title .title-wrapper {
+  margin-bottom: 5rem;
+}
+.hero .hero-image .hero-title .title-wrapper h2 {
+  font-family: "Picnic";
+  font-size: 5rem;
+  margin-bottom: 1.2rem;
+}
+.hero .hero-image .hero-title .title-wrapper h3 {
+  font-family: "Fablab";
+  font-size: 1.4rem;
+}
+.hero .hero-image .hero-title .title-wrapper p {
+  font-family: "Monor Bold";
+  font-size: 1.2rem;
+  color: rgb(0, 255, 128);
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows {
+  font: bold 1.5rem monospace;
+  font-stretch: expanded;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows #arrow-1 {
+  animation: appear-first 1s infinite;
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+}
+.hero .hero-image .hero-title .title-wrapper .arrows #arrow-2 {
+  animation: appear-second 1s infinite;
+  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
 }
 
+@keyframes appear-first {
+  0% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes appear-second {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
 .transition {
   position: relative;
   max-width: 1920px;

@@ -5,10 +5,12 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel='stylesheet' href='styles/main.css'>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
   <script type='module' src='./scripts/main.js' defer></script>
+  <script src="https://kit.fontawesome.com/fd2ac630a2.js" crossorigin="anonymous"></script>
   <title>Cassie Lee | Junior Developer</title>
 </head>
 
@@ -28,8 +30,8 @@
 
     <nav class='small-nav'>
       <div class='navbar'>
-        <button value='hero'>Home</button>
-        <div class='drop-menu'>Drop Down</div>
+        <button value='hero'><i class="fa-solid fa-house-chimney fa-lg"></i></i></button>
+        <div class='drop-menu'><i class="fa-solid fa-chevron-down fa-lg"></i></div>
       </div>
       <div class="small-nav-wrapper">
         <button value='about'>About</button>
@@ -44,7 +46,19 @@
   <main>
     <section class='hero'>
       <div class='hero-image'>
-        <h2>Cassie Lee</h2>
+        <div class='hero-title'>
+          <div class='title-wrapper'>
+            <h2>Cassie Lee</h2>
+            <h3>JUNIOR DEVELOPER</h3>
+          </div>
+          <div class='title-wrapper'>
+            <p>take a deep dive</p>
+            <div class='arrows'>
+              <div id='arrow-1'><i class="fa-solid fa-caret-down fa-xl" style="color: rgb(0, 255, 128);"></i></div>
+              <div id='arrow-2'><i class="fa-solid fa-caret-down fa-xl" style="color: rgb(0, 255, 128);"></i></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class='transition'>
         <div class='matrix-3 layer' data-speed='0.5'></div>
@@ -54,19 +68,100 @@
     </section>
 
     <section class='about'>
-      <h2>Something About Me</h2>
-      <p>
-        The prospect of gaining insight into meticulous systems and creating anew have always ignited a longstanding
-        passion within me.
-        Whether it is pouring out lines of code, reseraching in a biomedical lab or putting strokes onto a canvas; they
-        all require the utmost dedication and honing of basic skillsets, to see the results come to fruition and see the
-        light of day.
-        Even with the frustration and struggles along the way, the journey inbetween is what excites me the most.
-      </p>
-      <p>
-        I relish in combining the scientific and logical methods with the creative and out-of-box thinking, when it
-        comes to solving problems.
-      </p>
+      <div class='about-wrapper'>
+        <h2><i class="fa-solid fa-arrow-right" style="color: rgb(51, 255, 187);"></i> Something About Me<span class='caret'>|</span></h2>
+        <p>
+          The prospect of gaining insight into meticulous systems and creating anew have always ignited a longstanding
+          passion within me.
+          Whether it is pouring out lines of code, reseraching in a biomedical lab or putting strokes onto a canvas;
+          they
+          all require the utmost dedication and honing of basic skillsets, to see the results come to fruition and see
+          the
+          light of day.
+          Even with the frustration and struggles along the way, the journey inbetween is what excites me the most.
+        </p>
+        <p>
+          I relish in combining the scientific and logical methods with the creative and out-of-box thinking, when it
+          comes to solving problems.
+        </p>
+      </div>
+      <div class='about-wrapper'>
+        <h3>Tech Stack</h3>
+        <div class='tech-list'>
+          <div class='skill'>
+            <i class="devicon-javascript-plain"></i>
+            <h4>JavaScript</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-python-plain"></i>
+            <h4>Python</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-html5-plain"></i>
+            <h4>HTML</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-css3-plain"></i>
+            <h4>CSS</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-sass-original"></i>
+            <h4>Sass</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-express-original"></i>
+            <h4>Express.js</h4>
+          </div>
+          <div class='skill'>
+            <i class="fa-brands fa-node-js"></i>
+            <h4>Node.js</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-react-original"></i>
+            <h4>React</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-mongodb-plain"></i>
+            <h4>MongoDB</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-mongoose-original"></i>
+            <h4>Mongoose</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-django-plain"></i>
+            <h4>Django</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-postgresql-plain"></i>
+            <h4>PostgreSQL</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-bootstrap-plain"></i>
+            <h4>Bootstrap</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-github-original"></i>
+            <h4>Github</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-npm-original-wordmark"></i>
+            <h4>NPM</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-linux-plain"></i>
+            <h4>Linux</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-heroku-original"></i>
+            <h4>Heroku</h4>
+          </div>
+          <div class='skill'>
+            <i class="devicon-insomnia-plain"></i>
+            <h4>Insomnia</h4>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class='projects'>

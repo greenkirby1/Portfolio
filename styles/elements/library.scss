@@ -1,0 +1,59 @@
+:root {
+  --bg-color: #2e2b2b;
+  --green: rgb(51, 255, 187);
+  --border-green: #67a563;
+  --btn-color: #bdffd1;
+  --height: 800px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+// section {
+//   height: 100vh;
+//   h2 {
+//     font-family: 'Fablab';
+//   }
+// }
+
+@font-face {
+  font-family: 'Picnic';
+  src: url('../../assets/PicNic-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Saint';
+  src: url('../../assets/Saint\ Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Milkman';
+  src: url('../../assets/milkman.ttf');
+}
+
+@font-face {
+  font-family: 'Fablab';
+  src: url('../../assets/Fablab.ttf');
+}
+
+@font-face {
+  font-family: 'Trickster';
+  src: url('../../assets/Trickster-Reg.otf');
+}
+
+@font-face {
+  font-family: 'Honey Demo';
+  src: url('../../assets/HoneyDemo-Light.otf');
+}
+
+@font-face {
+  font-family: 'Monor Reg';
+  src: url('../../assets/Monor_Regular.otf');
+}
+
+@font-face {
+  font-family: 'Monor Bold';
+  src: url('../../assets/monor-bold.otf');
+}
