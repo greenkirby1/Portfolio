@@ -12,8 +12,8 @@
   --title-font: 'Monor Bold', monospace;
   --display-font: 'Fablab', 'Cascadia Mono', monospace;
   --arrow-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
-  --page-width: 670px;
-  --page-height: 500px;
+  --page-width: 500px;
+  --page-height: calc(400px + 35px + 60px);
 }
 
 * {

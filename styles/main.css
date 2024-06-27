@@ -13,8 +13,8 @@
   --title-font: "Monor Bold", monospace;
   --display-font: "Fablab", "Cascadia Mono", monospace;
   --arrow-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
-  --page-width: 670px;
-  --page-height: 500px;
+  --page-width: 500px;
+  --page-height: calc(400px + 35px + 60px);
 }
 
 * {
@@ -301,6 +301,7 @@
   justify-content: space-evenly;
   background-color: var(--bg-color);
   font-family: var(--content-font);
+  padding-bottom: 5rem;
 }
 .about .about-wrapper {
   color: var(--content-color);
@@ -311,7 +312,7 @@
 }
 .about .about-wrapper h2, .about .about-wrapper h3 {
   font-family: var(--title-font);
-  font-size: 2rem;
+  font-size: var(--subtitle-size);
   color: var(--subtitle-color);
   text-align: center;
   margin-bottom: 2rem;
@@ -347,37 +348,71 @@
   }
 }
 .projects {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   background-color: var(--bg-color);
   font-family: var(--content-font);
   color: var(--content-color);
+  padding-bottom: 5rem;
 }
-.projects .project-container {
+.projects h2 {
+  font-family: var(--title-font);
+  font-size: var(--subtitle-size);
+  color: var(--subtitle-color);
+  margin-bottom: 2rem;
+}
+.projects .projects-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects .projects-container .project-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5rem 0;
+}
+@media only screen and (max-width: 950px) {
+  .projects .projects-container .project-wrapper {
+    flex-direction: column;
+  }
+}
+.projects .projects-container .project-wrapper .page-wrapper {
   width: var(--page-width);
   height: var(--page-height);
   display: flex;
   flex-direction: column;
 }
-.projects .project-container .page-tab {
+@media only screen and (max-width: 480px) {
+  .projects .projects-container .project-wrapper .page-wrapper {
+    transform: scale(0.8);
+  }
+}
+.projects .projects-container .project-wrapper .page-wrapper .page-tab {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 35px;
   max-width: -moz-fit-content;
   max-width: fit-content;
   border: 2px solid white;
   border-radius: 5px 5px 0px 0px;
   border-bottom: none;
 }
-.projects .project-container .page-tab h3 {
-  padding: 0 1rem;
+.projects .projects-container .project-wrapper .page-wrapper .page-tab h3 {
+  padding: 0.5rem 1rem;
 }
-.projects .project-container .page {
+.projects .projects-container .project-wrapper .page-wrapper .page {
   border: 2px solid white;
   width: 100%;
-  height: calc(100% - 100px);
+  height: 100%;
   border-radius: 0px 5px 5px 5px;
 }
-.projects .project-container .page .page-address {
+.projects .projects-container .project-wrapper .page-wrapper .page .page-address {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,7 +420,7 @@
   width: 100%;
   border-bottom: 2px solid white;
 }
-.projects .project-container .page .page-address .address {
+.projects .projects-container .project-wrapper .page-wrapper .page .page-address .address {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -393,8 +428,31 @@
   width: 95%;
   border: 2px solid white;
   border-radius: 15px;
+  padding: 0rem 1rem;
+}
+.projects .projects-container .project-wrapper .page-wrapper .page .page-address .address a {
+  color: var(--content-color);
+  text-decoration: none;
+  padding-left: 1rem;
+}
+.projects .projects-container .project-wrapper .page-wrapper .page .page-content {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.projects .projects-container .project-wrapper .page-wrapper .page .page-content img {
+  width: 100%;
+  padding: 1.7rem;
+  border-radius: 15px;
+}
+.projects .projects-container .project-wrapper p {
+  width: 40%;
 }
 
+@media only screen and (max-width: 950px) {
+  .project-wrapper p {
+    width: var(--content-width) !important;
+  }
+}
 .experience {
   background-color: aqua;
   font-family: "Combine";
