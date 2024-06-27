@@ -1,4 +1,48 @@
 .projects  {
-  background-color: bisque;
-  font-family: 'Louise Regular';
+  background-color: var(--bg-color);
+  font-family: var(--content-font);
+  color: var(--content-color);
+  .project-container {
+    width: var(--page-width);
+    height: var(--page-height);
+    display: flex;
+    flex-direction: column;
+    .page-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      max-width: fit-content;
+      border: 2px solid white;
+      border-radius: 5px 5px 0px 0px;
+      border-bottom: none;
+      h3 {
+        padding: 0 1rem;
+      }
+    }
+    .page {
+      border: 2px solid white;
+      width: 100%;
+      height: calc(100% - 100px);
+      border-radius: 0px 5px 5px 5px;
+      .page-address {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        border-bottom: 2px solid white;
+        .address {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 75%;
+          width: 95%;
+          border: 2px solid white;
+          border-radius: 15px;
+
+        }
+      }
+    }
+  }
 }

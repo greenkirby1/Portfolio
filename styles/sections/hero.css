@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  color: white;
+  color: var(--content-color);
   text-align: center;
 }
 .hero .hero-image .hero-title .title-wrapper {
@@ -31,26 +31,22 @@
   margin-bottom: 1.2rem;
 }
 .hero .hero-image .hero-title .title-wrapper h3 {
-  font-family: "Fablab";
+  font-family: var(--display-font);
   font-size: 1.4rem;
 }
 .hero .hero-image .hero-title .title-wrapper p {
-  font-family: "Monor Bold";
+  font-family: var(--title-font);
   font-size: 1.2rem;
   color: rgb(0, 255, 128);
-  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
-}
-.hero .hero-image .hero-title .title-wrapper .arrows {
-  font: bold 1.5rem monospace;
-  font-stretch: expanded;
+  text-shadow: var(--arrow-shadow);
 }
 .hero .hero-image .hero-title .title-wrapper .arrows #arrow-1 {
   animation: appear-first 1s infinite;
-  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+  text-shadow: var(--arrow-shadow);
 }
 .hero .hero-image .hero-title .title-wrapper .arrows #arrow-2 {
   animation: appear-second 1s infinite;
-  text-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+  text-shadow: var(--arrow-shadow);
 }
 
 @keyframes appear-first {
@@ -88,6 +84,11 @@
   width: 100%;
   height: var(--height);
 }
+@media only screen and (max-width: 1000px) {
+  .transition .layer {
+    background-size: 120%;
+  }
+}
 
 .matrix-3 {
   background-image: url("../assets/matrix-3.png");
@@ -105,10 +106,4 @@
 .matrix-1 {
   background-image: url("../assets/matrix-1.png");
   z-index: 2;
-}
-
-@media only screen and (max-width: 1000px) {
-  .layer {
-    background-size: 120% !important;
-  }
 }/*# sourceMappingURL=hero.css.map */

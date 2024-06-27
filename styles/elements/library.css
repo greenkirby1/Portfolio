@@ -3,7 +3,17 @@
   --green: rgb(51, 255, 187);
   --border-green: #67a563;
   --btn-color: #bdffd1;
+  --subtitle-color: aqua;
+  --content-color: white;
   --height: 800px;
+  --content-width: 80vmin;
+  --subtitle-size: 2rem;
+  --content-font: "Monor Reg", monospace;
+  --title-font: "Monor Bold", monospace;
+  --display-font: "Fablab", "Cascadia Mono", monospace;
+  --arrow-shadow: -2px -2px #eb0cff, 2px 2px #005aff;
+  --page-width: 670px;
+  --page-height: 500px;
 }
 
 * {
@@ -42,4 +52,23 @@
 @font-face {
   font-family: "Monor Bold";
   src: url("../../assets/monor-bold.otf");
+}
+.caret {
+  color: var(--content-color);
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=library.css.map */
