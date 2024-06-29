@@ -101,14 +101,26 @@
 }
 .projects .projects-container .project-wrapper .project-descript {
   width: 40%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  flex-grow: 1;
   margin: 0 4.5rem 0 2rem;
   font-size: 1.05rem;
   text-align: justify;
+}
+@media only screen and (max-width: 530px) {
+  .projects .projects-container .project-wrapper .project-descript {
+    height: 50vh;
+  }
+}
+.projects .projects-container .project-wrapper .project-descript .mini-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  justify-content: space-evenly;
 }
 .projects .projects-container .project-wrapper .project-descript .mini-info h4 .bracket {
   color: var(--curly-brac);
@@ -119,8 +131,9 @@
 .projects .projects-container .project-wrapper .project-descript .mini-info h4 .value {
   color: var(--link-color);
 }
-.projects .projects-container .project-wrapper .project-descript p {
-  padding: 1rem;
+.projects .projects-container .project-wrapper .project-descript .mini-info .tech-stack {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 .projects .projects-container .project-wrapper .project-descript p a {
   color: var(--link-color);
