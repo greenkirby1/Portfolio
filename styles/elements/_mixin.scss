@@ -1,0 +1,15 @@
+@mixin section {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
+}
+
+@mixin subtitle {
+  font-family: var(--title-font);
+  font-size: var(--subtitle-size);
+  color: var(--subtitle-color);
+}

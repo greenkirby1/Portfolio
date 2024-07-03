@@ -1,6 +1,8 @@
+@use '../elements/mixin';
+
 .experience {
-  background-color: aqua;
-  font-family: 'Combine';
+  @include mixin.section;
+  align-items: center;
   .job {
     img {
       width: 200px;

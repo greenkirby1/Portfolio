@@ -224,8 +224,8 @@
   font-size: 1.4rem;
 }
 .hero .hero-image .hero-title .title-wrapper p {
-  font-family: var(--title-font);
-  font-size: 1.2rem;
+  font-family: var(--display-font);
+  font-size: 1.1rem;
   color: rgb(0, 255, 128);
   text-shadow: var(--arrow-shadow);
 }
@@ -299,11 +299,14 @@
 
 .about {
   min-height: 100vh;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--bg-color);
   font-family: var(--content-font);
   padding-bottom: 5rem;
 }
@@ -314,12 +317,20 @@
   align-items: center;
   width: var(--content-width);
 }
-.about .about-wrapper h2, .about .about-wrapper h3 {
+.about .about-wrapper h2,
+.about .about-wrapper h3 {
   font-family: var(--title-font);
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
   text-align: center;
   margin-bottom: 2rem;
+}
+.about .about-wrapper p {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.about .about-wrapper p:last-child {
+  padding-bottom: 3rem;
 }
 .about .about-wrapper .tech-list {
   display: flex;
@@ -353,20 +364,21 @@
 }
 .projects {
   min-height: 100vh;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--bg-color);
   font-family: var(--content-font);
-  color: var(--content-color);
-  padding-bottom: 5rem;
 }
 .projects h2 {
   font-family: var(--title-font);
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
-  margin-bottom: 2rem;
 }
 .projects .projects-container {
   width: 100%;
@@ -378,13 +390,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 @media only screen and (max-width: 950px) {
   .projects .projects-container .project-wrapper {
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    margin: 3rem 0;
   }
 }
 .projects .projects-container .project-wrapper .page-wrapper {
@@ -454,25 +465,18 @@
 }
 .projects .projects-container .project-wrapper .project-descript {
   width: 40%;
-  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   margin: 0 4.5rem 0 2rem;
   font-size: 1.05rem;
   text-align: justify;
 }
-@media only screen and (max-width: 530px) {
-  .projects .projects-container .project-wrapper .project-descript {
-    height: 50vh;
-  }
-}
 .projects .projects-container .project-wrapper .project-descript .mini-info {
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 60px;
   justify-content: space-evenly;
 }
 .projects .projects-container .project-wrapper .project-descript .mini-info h4 .bracket {
@@ -529,9 +533,23 @@
     margin: 0 !important;
   }
 }
+@media only screen and (max-width: 530px) {
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .project-wrapper {
+    margin: 2rem 0 !important;
+  }
+}
 .experience {
-  background-color: aqua;
-  font-family: "Combine";
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
+  align-items: center;
 }
 .experience .job img {
   width: 200px;
@@ -541,14 +559,24 @@
 }
 
 .interests {
-  background-color: lavender;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
 }
 
 .contacts {
-  background-color: tomato;
-  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
+  padding: 3rem 0;
+  color: var(--content-color);
+  font-family: var(--content-font);
+  width: 100%;
   justify-content: center;
   align-items: center;
 }

@@ -1,0 +1,5 @@
+@use '../elements/mixin';
+
+.interests {
+  @include mixin.section;
+}

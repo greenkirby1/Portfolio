@@ -1,8 +1,8 @@
+@use '../elements/mixin';
+
 .contacts {
-  background-color: tomato;
+  @include mixin.section;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   .socials-wrapper {
