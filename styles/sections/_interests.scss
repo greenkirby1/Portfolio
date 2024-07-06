@@ -2,4 +2,5 @@
 
 .interests {
   @include mixin.section;
+  align-items: center;
 }
