@@ -13,3 +13,14 @@
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
 }
+
+@mixin link {
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    border: 1px solid var(--link-color);
+  }
+}

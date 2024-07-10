@@ -567,11 +567,12 @@
   align-items: center;
 }
 .experience .jobs-wrapper .job {
-  width: 40%;
-  margin: 1.5rem 0;
+  width: 80%;
+  margin: 1.5rem 0 2rem 0;
   display: flex;
 }
 .experience .jobs-wrapper .job .title-wrapper {
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -588,7 +589,18 @@
   text-align: right;
 }
 .experience .jobs-wrapper .job .job-descript {
-  width: 60%;
+  width: 70%;
+  padding-left: 2rem;
+}
+.experience .jobs-wrapper .job .job-descript p:not(:last-child) {
+  padding-bottom: 1rem;
+}
+.experience .jobs-wrapper .job .job-descript p a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+.experience .jobs-wrapper .job .job-descript p a:hover {
+  border: 1px solid var(--link-color);
 }
 
 .interests {

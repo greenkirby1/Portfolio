@@ -145,14 +145,15 @@
         }
 
         p {
-          a {
-            color: var(--link-color);
-            text-decoration: none;
-          }
+          // a {
+          //   color: var(--link-color);
+          //   text-decoration: none;
+          // }
 
-          a:hover {
-            border: 1px solid var(--link-color);
-          }
+          // a:hover {
+          //   border: 1px solid var(--link-color);
+          // }
+          @include mixin.link;
         }
 
         .button-wrapper {

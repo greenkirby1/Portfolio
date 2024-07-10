@@ -4,38 +4,56 @@
   @include mixin.section;
   align-items: center;
   width: 100%;
+
   h2 {
     @include mixin.subtitle;
     margin-bottom: 2rem;
   }
+
   .jobs-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+
     // margin-bottom: 4.5rem;
     .job {
-      width: 40%;
-      margin: 1.5rem 0;
+      width: 80%;
+      margin: 1.5rem 0 2rem 0;
       display: flex;
+
       .title-wrapper {
+        width: 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: end;
         margin-right: 1.5rem;
+
         img {
           width: 180px;
         }
+
         i {
           font-size: 4rem;
         }
+
         h3 {
           text-align: right;
         }
       }
+
       .job-descript {
-        width: 60%;
+        width: 70%;
+        padding-left: 2rem;
+
+        p:not(:last-child) {
+          padding-bottom: 1rem;
+        }
+
+        p {
+          @include mixin.link
+        }
       }
     }
   }
