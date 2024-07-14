@@ -24,3 +24,27 @@
     border: 1px solid var(--link-color);
   }
 }
+
+@mixin page-btn {
+  button {
+    font-family: var(--title-font);
+    font-size: 1.05rem;
+    color: var(--content-color);
+    background-color: var(--bg-color);
+    border: 2px solid var(--content-color);
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    margin: 2rem;
+    width: max-content;
+
+    i {
+      padding-right: 0.5rem;
+    }
+  }
+
+  button:hover {
+    color: var(--page-btn);
+    border-color: var(--page-btn);
+  }
+}
