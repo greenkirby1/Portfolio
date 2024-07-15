@@ -6,12 +6,12 @@ function init() {
   const hiddenMenu = document.querySelector('.small-nav-wrapper')
   const btns = document.querySelectorAll('button')
   const sections = document.querySelectorAll('section')
-  // const home = document.querySelector('.hero')
-  // const about = document.querySelector('.about')
-  // const projects = document.querySelector('.projects')
-  // const experience = document.querySelector('.experience')
-  // const interests = document.querySelector('.interests')
-  // const contacts = document.querySelector('.contacts')
+  const sentMsg = document.querySelector('.sent-msg')
+  const sendBtn = document.querySelector('.contact-btn')
+  const contactForm = document.querySelector('form')
+  // console.log(contactForm)
+  // console.log(sentMsg)
+  // console.log(sendBtn)
 
   // * nav-bar animation
   ScrollTrigger.create({
@@ -26,9 +26,6 @@ function init() {
 
   // * hero image animation
   const tl = gsap.timeline()
-
-  // const layers = gsap.utils.toArray('.layer')
-  // console.log(layers)
 
   tl
     .to('.transition', {
@@ -131,8 +128,10 @@ function init() {
     })
   }
 
+  // * event listeners
   dropMenuBtn.addEventListener('click', openMenu)
   window.addEventListener('scroll' || 'click', sectionChange)
+  contactForm.addEventListener('submit', handleSubmit)
 }
 
 window.addEventListener('DOMContentLoaded', init)

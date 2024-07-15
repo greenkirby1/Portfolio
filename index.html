@@ -513,56 +513,54 @@
     <section class='contacts'>
       <h2><i class="fa-solid fa-arrow-right" style="color: rgb(51, 255, 187);"></i> Contacts<span class='caret'>|</span>
       </h2>
-      <div class='form-wrapper'>
-        <h3>Let's Chat</h3>
-        <form action='https://formspree.io/f/manwnjaz' method='POST'>
-          <div class='field-wrapper'>
-            <label for='email'>Email Address<span class='required'>*</span>:</label>
-            <input name='email' type='email' required>
+      <!-- <div class='contacts-container'> -->
+        <div class='form-wrapper'>
+          <h3>Let's Chat</h3>
+          <form action='https://formspree.io/f/manwnjaz' method='POST'>
+            <div class='field-wrapper'>
+              <label for='name'>Name<span class='required'>*</span>:</label>
+              <input name='name' type='text' required>
+            </div>
+            <div class='field-wrapper'>
+              <label for='email'>Email Address<span class='required'>*</span>:</label>
+              <input name='email' type='email' required>
+            </div>
+            <div class='field-wrapper'>
+              <label for='subject'>Subject:</label>
+              <input name='subject' type='text'>
+            </div>
+            <div class='field-wrapper'>
+              <label for='message'>Message<span class='required'>*</span>:</label>
+              <textarea name='message' maxlength='1000' required></textarea>
+            </div>
+            <button class='contact-btn' type='submit'>Send</button>
+          </form>
+          <!-- <div class='sent-msg'>Thank you for your message!</div> -->
+        </div>
+        <div class='socials-container'>
+          <h3>And Connect...</h3>
+          <div class='socials-wrapper'>
+            <!-- <a href='mailto:cassie.lee1023@gmail.com'><i class="fa-solid fa-envelope"></i><span>Email</span></a> -->
+            <a href='https://github.com/greenkirby1' target='_blank'>
+              <button class='social-btn'>
+                <i class="devicon-github-original"></i><span>GitHub</span>
+              </button>
+            </a>
+            <a href='https://www.linkedin.com/in/cassie-lee-software-engineer/' target='_blank'>
+              <button class='social-btn'>
+                <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
+              </button>
+            </a>
+            <!-- <a href='#instagram'>
+              <button class='social-btn'>
+                <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+              </button>
+            </a> -->
           </div>
-          <div class='field-wrapper'>
-            <label for='name'>Name:</label>
-            <input name='name' type='text'>
-          </div>
-          <div class='field-wrapper'>
-            <label for='subject'>Subject:</label>
-            <input name='subject' type='text'>
-          </div>
-          <div class='field-wrapper'>
-            <label for='message'>Message<span class='required'>*</span>:</label>
-            <textarea name='message' maxlength='1000' required></textarea>
-          </div>
-          <button type='submit'>Send</button>
-        </form>
-        <div class='sent-msg'>Thank you for your message!</div>
-      </div>
-      <div class='socials-wrapper'>
-        <!-- <a href='mailto:cassie.lee1023@gmail.com'><i class="fa-solid fa-envelope"></i><span>Email</span></a> -->
-        <a href='https://github.com/greenkirby1'>
-          <button class='social-btn'>
-            <i class="devicon-github-original"></i><span>GitHub</span>
-          </button>
-        </a>
-        <a href='https://www.linkedin.com/in/cassie-lee-software-engineer/'>
-          <button class='social-btn'>
-            <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
-          </button>
-        </a>
-        <a href='#instagram'>
-          <button class='social-btn'>
-            <i class="fa-brands fa-instagram"></i><span>Instagram</span>
-          </button>
-        </a>
-      </div>
+        </div>
       <!-- </div> -->
     </section>
   </main>
-
-  <footer>
-    <ul>
-
-    </ul>
-  </footer>
 </body>
 
 </html>

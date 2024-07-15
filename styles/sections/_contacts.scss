@@ -4,42 +4,86 @@
   @include mixin.section;
   width: 100%;
   align-items: center;
+  padding-bottom: 0;
 
   h2 {
     @include mixin.subtitle;
     margin-bottom: 2rem;
   }
-  .form-wrapper {
+
+  .form-wrapper,
+  .socials-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
     width: 100%;
+
     h3 {
       padding-bottom: 1rem;
     }
+
     form {
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+
       .field-wrapper {
-        width: 80%;
-        input, textarea {
+        width: 500px;
+        margin-bottom: 1rem;
+
+        label {
+          .required {
+            color: var(--link-color);
+          }
+        }
+
+        input,
+        textarea {
           display: block;
           width: 100%;
+          padding: 0.5rem;
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          font-family: var(--content-font);
+          color: var(--content-color);
+          border: 2px solid white;
+          border-radius: 5px;
+          background-color: var(--bg-color);
         }
+
         textarea {
-          height: 5rem;
+          height: 10rem;
         }
+
+        input:focus,
+        textarea:focus {
+          outline: none;
+          border: 2px solid var(--link-color);
+          transition: 0.5s;
+        }
+      }
+
+      @include mixin.page-btn;
+
+      button {
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
       }
     }
   }
+
   .socials-wrapper {
     display: flex;
-    flex-direction: column;
+
     a {
       @include mixin.page-btn;
+      button {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
     }
   }
 }
