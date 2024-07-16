@@ -4,7 +4,7 @@
   @include mixin.section;
   align-items: center;
   justify-content: space-evenly;
-  // padding-bottom: 5rem;
+  padding-bottom: 8rem;
 
   h2 {
     @include mixin.subtitle;
@@ -39,7 +39,7 @@
         margin: 0 2rem 0 4.5rem;
 
         @media only screen and (max-width: 530px) {
-          transform: scale(0.8);
+          transform: scale(0.7);
         }
 
         .page-tab {
@@ -111,7 +111,7 @@
         // flex-grow: 1;
         margin: 0 4.5rem 0 2rem;
         font-size: 1.05rem;
-        text-align: justify;
+        text-align: center;
 
         @media only screen and (max-width: 530px) {
           // height: 50vh;
@@ -144,22 +144,19 @@
           }
         }
 
-        p {
-          // a {
-          //   color: var(--link-color);
-          //   text-decoration: none;
-          // }
+        p:not(:last-child) {
+          padding-bottom: 1rem;
+        }
 
-          // a:hover {
-          //   border: 1px solid var(--link-color);
-          // }
+        p {
           @include mixin.link;
+          line-height: 130%;
         }
 
         .button-wrapper {
           width: 100%;
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
           // margin-top: 2rem;
 
           a {

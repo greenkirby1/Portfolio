@@ -4,6 +4,7 @@
   @include mixin.section;
   align-items: center;
   width: 100%;
+  padding-bottom: 8rem;
 
   h2 {
     @include mixin.subtitle;
@@ -52,7 +53,8 @@
         }
 
         p {
-          @include mixin.link
+          @include mixin.link;
+          line-height: 130%;
         }
       }
     }

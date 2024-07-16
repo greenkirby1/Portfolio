@@ -131,7 +131,6 @@ function init() {
   // * event listeners
   dropMenuBtn.addEventListener('click', openMenu)
   window.addEventListener('scroll' || 'click', sectionChange)
-  contactForm.addEventListener('submit', handleSubmit)
 }
 
 window.addEventListener('DOMContentLoaded', init)

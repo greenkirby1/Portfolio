@@ -17,7 +17,11 @@
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
-    width: 100%;
+    width: 500px;
+
+    @media only screen and (max-width: 530px) {
+      width: 350px;
+    }
 
     h3 {
       padding-bottom: 1rem;
@@ -30,7 +34,7 @@
       align-items: center;
 
       .field-wrapper {
-        width: 500px;
+        width: 100%;
         margin-bottom: 1rem;
 
         label {
@@ -80,6 +84,7 @@
 
     a {
       @include mixin.page-btn;
+
       button {
         margin-left: 2rem;
         margin-right: 2rem;

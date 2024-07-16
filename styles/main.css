@@ -307,8 +307,7 @@
   font-family: var(--content-font);
   align-items: center;
   justify-content: space-evenly;
-  font-family: var(--content-font);
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
 }
 .about .about-wrapper {
   color: var(--content-color);
@@ -328,6 +327,7 @@
 .about .about-wrapper p {
   text-align: center;
   padding-bottom: 1.5rem;
+  line-height: 130%;
 }
 .about .about-wrapper p:last-child {
   padding-bottom: 3rem;
@@ -367,6 +367,7 @@
   font-family: var(--content-font);
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 8rem;
 }
 .projects h2 {
   font-family: var(--title-font);
@@ -402,7 +403,7 @@
 }
 @media only screen and (max-width: 530px) {
   .projects .projects-container .project-wrapper .page-wrapper {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 .projects .projects-container .project-wrapper .page-wrapper .page-tab {
@@ -464,7 +465,7 @@
   align-items: center;
   margin: 0 4.5rem 0 2rem;
   font-size: 1.05rem;
-  text-align: justify;
+  text-align: center;
 }
 .projects .projects-container .project-wrapper .project-descript .mini-info {
   width: 100%;
@@ -485,6 +486,12 @@
   font-size: 1.2rem;
   margin: 1rem 0;
 }
+.projects .projects-container .project-wrapper .project-descript p:not(:last-child) {
+  padding-bottom: 1rem;
+}
+.projects .projects-container .project-wrapper .project-descript p {
+  line-height: 130%;
+}
 .projects .projects-container .project-wrapper .project-descript p a {
   color: var(--link-color);
   text-decoration: none;
@@ -495,7 +502,7 @@
 .projects .projects-container .project-wrapper .project-descript .button-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .projects .projects-container .project-wrapper .project-descript .button-wrapper a button {
   font-family: var(--title-font);
@@ -506,7 +513,7 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 0;
+  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }
@@ -546,6 +553,7 @@
   font-family: var(--content-font);
   align-items: center;
   width: 100%;
+  padding-bottom: 8rem;
 }
 .experience h2 {
   font-family: var(--title-font);
@@ -588,6 +596,9 @@
 .experience .jobs-wrapper .job .job-descript p:not(:last-child) {
   padding-bottom: 1rem;
 }
+.experience .jobs-wrapper .job .job-descript p {
+  line-height: 130%;
+}
 .experience .jobs-wrapper .job .job-descript p a {
   color: var(--link-color);
   text-decoration: none;
@@ -605,6 +616,36 @@
   color: var(--content-color);
   font-family: var(--content-font);
   align-items: center;
+  width: 100%;
+  padding-bottom: 8rem;
+}
+.interests h2, .interests h3 {
+  font-family: var(--title-font);
+  font-size: var(--subtitle-size);
+  color: var(--subtitle-color);
+  margin-bottom: 2rem;
+}
+.interests .interest {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.interests .interest .interest-descript p {
+  line-height: 130%;
+}
+.interests .polaroid {
+  width: 200px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.interests .polaroid img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .contacts {
@@ -631,7 +672,13 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.2rem;
-  width: 100%;
+  width: 500px;
+}
+@media only screen and (max-width: 530px) {
+  .contacts .form-wrapper,
+  .contacts .socials-container {
+    width: 350px;
+  }
 }
 .contacts .form-wrapper h3,
 .contacts .socials-container h3 {
@@ -646,7 +693,7 @@
 }
 .contacts .form-wrapper form .field-wrapper,
 .contacts .socials-container form .field-wrapper {
-  width: 500px;
+  width: 100%;
   margin-bottom: 1rem;
 }
 .contacts .form-wrapper form .field-wrapper label .required,
@@ -690,7 +737,7 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 0;
+  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }
@@ -721,7 +768,7 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 0;
+  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }

@@ -3,4 +3,36 @@
 .interests {
   @include mixin.section;
   align-items: center;
+  width: 100%;
+  padding-bottom: 8rem;
+
+  h2, h3 {
+    @include mixin.subtitle;
+    margin-bottom: 2rem;
+  }
+  
+  .interest {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+
+    .interest-descript {
+      p {
+        line-height: 130%;
+      }
+    }
+  }
+
+  .polaroid {
+    width: 200px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    img {
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }
