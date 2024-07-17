@@ -95,7 +95,7 @@
 }
 .big-nav button {
   font-family: "Fablab";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 10px;
   height: 3rem;
   padding: 0.8rem;
@@ -152,12 +152,12 @@
 }
 .small-nav .small-nav-wrapper button {
   margin: 0.5rem;
-  width: 190px;
+  width: 200px;
   text-align: center;
 }
 .small-nav button, .small-nav .drop-menu {
   font-family: "Fablab";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 10px;
   height: 3rem;
   padding: 0.8rem;
@@ -403,7 +403,8 @@
 }
 @media only screen and (max-width: 530px) {
   .projects .projects-container .project-wrapper .page-wrapper {
-    transform: scale(0.7);
+    width: 90%;
+    font-size: 0.8rem;
   }
 }
 .projects .projects-container .project-wrapper .page-wrapper .page-tab {
@@ -472,6 +473,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 2rem;
 }
 .projects .projects-container .project-wrapper .project-descript .mini-info h4 .bracket {
   color: var(--curly-brac);
@@ -504,6 +506,9 @@
   display: flex;
   justify-content: center;
 }
+.projects .projects-container .project-wrapper .project-descript .button-wrapper a {
+  margin: 2rem 1rem;
+}
 .projects .projects-container .project-wrapper .project-descript .button-wrapper a button {
   font-family: var(--title-font);
   font-size: 1.05rem;
@@ -513,7 +518,6 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }
@@ -619,31 +623,81 @@
   width: 100%;
   padding-bottom: 8rem;
 }
-.interests h2, .interests h3 {
+.interests h2,
+.interests h3 {
   font-family: var(--title-font);
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
   margin-bottom: 2rem;
 }
-.interests .interest {
+.interests .interests-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.interests .interests-container .interest {
   display: flex;
   justify-content: center;
-  width: 80%;
+  align-items: center;
+  width: 100%;
 }
-.interests .interest .interest-descript p {
+.interests .interests-container .interest .interest-descript {
+  width: 400px;
+  text-align: center;
+}
+.interests .interests-container .interest .interest-descript p {
   line-height: 130%;
 }
-.interests .polaroid {
-  width: 200px;
-  height: 300px;
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 1rem;
+.interests .pics-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.interests .polaroid img {
+.interests .pics-wrapper .polaroid {
+  margin: 1.5rem;
+}
+.interests .pics-wrapper .polaroid p {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  color: black;
+  font-family: var(--title-font);
+  font-size: 0.7rem;
+  padding: 0.2rem;
+}
+.interests .pics-wrapper .normal {
+  width: 250px;
+  background-color: white;
+  padding: 1.2rem 1.2rem 3rem 1.2rem;
+}
+.interests .pics-wrapper .normal img {
   width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.interests .pics-wrapper .landscape {
+  height: 250px;
+  background-color: white;
+  padding: 1.2rem 1.2rem 3rem 1.2rem;
+}
+.interests .pics-wrapper .landscape img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.interests .pics-wrapper .square {
+  background-color: white;
+  padding: 1.2rem 1.2rem 3rem 1.2rem;
+  text-align: center;
+}
+.interests .pics-wrapper .square img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
@@ -717,7 +771,7 @@
 }
 .contacts .form-wrapper form .field-wrapper textarea,
 .contacts .socials-container form .field-wrapper textarea {
-  height: 10rem;
+  height: 5rem;
 }
 .contacts .form-wrapper form .field-wrapper input:focus,
 .contacts .form-wrapper form .field-wrapper textarea:focus,
@@ -737,7 +791,6 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }
@@ -759,6 +812,9 @@
 .contacts .socials-wrapper {
   display: flex;
 }
+.contacts .socials-wrapper a {
+  margin: 2rem 1rem;
+}
 .contacts .socials-wrapper a button {
   font-family: var(--title-font);
   font-size: 1.05rem;
@@ -768,7 +824,6 @@
   border-radius: 10px;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
-  margin: 2rem 1rem;
   width: -moz-max-content;
   width: max-content;
 }
@@ -778,8 +833,4 @@
 .contacts .socials-wrapper a button:hover {
   color: var(--page-btn);
   border-color: var(--page-btn);
-}
-.contacts .socials-wrapper a button {
-  margin-left: 2rem;
-  margin-right: 2rem;
 }/*# sourceMappingURL=main.css.map */

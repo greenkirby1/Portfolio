@@ -128,6 +128,9 @@ function init() {
     })
   }
 
+  // * interests animation
+ 
+
   // * event listeners
   dropMenuBtn.addEventListener('click', openMenu)
   window.addEventListener('scroll' || 'click', sectionChange)

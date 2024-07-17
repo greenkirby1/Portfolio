@@ -39,7 +39,9 @@
         margin: 0 2rem 0 4.5rem;
 
         @media only screen and (max-width: 530px) {
-          transform: scale(0.7);
+          // transform: scale(0.7);
+          width: 90%;
+          font-size: 0.8rem;
         }
 
         .page-tab {
@@ -123,6 +125,7 @@
           flex-direction: column;
           // height: 60px;
           justify-content: space-evenly;
+          margin-top: 2rem;
 
           h4 {
             .bracket {
@@ -158,9 +161,10 @@
           display: flex;
           justify-content: center;
           // margin-top: 2rem;
-
+          
           a {
             @include mixin.page-btn;
+            margin: 2rem 1rem;
           }
 
         }

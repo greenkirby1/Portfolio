@@ -58,7 +58,7 @@
         }
 
         textarea {
-          height: 10rem;
+          height: 5rem;
         }
 
         input:focus,
@@ -84,11 +84,7 @@
 
     a {
       @include mixin.page-btn;
-
-      button {
-        margin-left: 2rem;
-        margin-right: 2rem;
-      }
+      margin: 2rem 1rem;
     }
   }
 }

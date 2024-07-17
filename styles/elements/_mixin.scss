@@ -13,6 +13,9 @@
   font-family: var(--title-font);
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
+  @if h3 {
+
+  }
 }
 
 @mixin link {
@@ -36,7 +39,7 @@
     border-radius: 10px;
     padding: 0.5rem 0.8rem;
     cursor: pointer;
-    margin: 2rem 1rem;
+    // margin: 2rem 1rem;
     width: max-content;
 
     i {

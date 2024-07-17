@@ -6,33 +6,98 @@
   width: 100%;
   padding-bottom: 8rem;
 
-  h2, h3 {
+  h2,
+  h3 {
     @include mixin.subtitle;
     margin-bottom: 2rem;
   }
-  
-  .interest {
-    display: flex;
-    justify-content: center;
-    width: 80%;
 
-    .interest-descript {
-      p {
-        line-height: 130%;
+  .interests-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .interest {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .interest-descript {
+        width: 400px;
+        text-align: center;
+
+        p {
+          line-height: 130%;
+        }
       }
     }
   }
 
-  .polaroid {
-    width: 200px;
-    height: 300px;
-    border: 2px solid white;
-    border-radius: 5px;
-    padding: 1rem;
-    img {
-      width: 100%;
-      object-fit: contain;
-      object-position: center;
+  .pics-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .polaroid {
+      margin: 1.5rem;
+
+      p {
+        position: absolute;
+        text-align: center;
+        width: 200px;
+        color: black;
+        font-family: var(--title-font);
+        font-size: 0.7rem;
+        padding: 0.2rem;
+      }
+    }
+
+    .normal {
+      // border: 2px solid white;
+      // border-radius: 5px;
+      width: 250px;
+      background-color: white;
+      padding: 1.2rem 1.2rem 3rem 1.2rem;
+      // height: 370px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    .landscape {
+      // border: 2px solid white;
+      // border-radius: 5px;
+      height: 250px;
+      background-color: white;
+      padding: 1.2rem 1.2rem 3rem 1.2rem;
+
+      // width: 370px;
+      img {
+        // width: 100%;
+        height: 100%;
+        object-fit: contain;
+        // object-position: center;
+      }
+    }
+
+    .square {
+      // border: 2px solid white;
+      // border-radius: 5px;
+      background-color: white;
+      padding: 1.2rem 1.2rem 3rem 1.2rem;
+      text-align: center;
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+      }
     }
   }
 }
