@@ -23,6 +23,10 @@
       align-items: center;
       width: 100%;
 
+      @media only screen and (max-width: 950px) {
+        flex-direction: column;
+      }
+
       .interest-descript {
         width: 400px;
         text-align: center;
@@ -39,11 +43,15 @@
     flex-direction: column;
     align-items: center;
 
+    @media only screen and (max-width: 950px) {
+      flex-direction: row;
+    }
+
     .polaroid {
       margin: 1.5rem;
 
       p {
-        position: absolute;
+        // position: absolute;
         text-align: center;
         width: 200px;
         color: black;
@@ -60,6 +68,9 @@
       background-color: white;
       padding: 1.2rem 1.2rem 3rem 1.2rem;
       // height: 370px;
+      @media only screen and (max-width: 530px) {
+
+      }
 
       img {
         width: 100%;

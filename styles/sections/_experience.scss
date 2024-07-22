@@ -18,35 +18,63 @@
     align-items: center;
 
     // margin-bottom: 4.5rem;
-    .job {
-      width: 80%;
-      margin: 1.5rem 0 2rem 0;
-      display: flex;
+    .job:not(:last-child) {
+      margin-bottom: 5rem;
+    }
 
-      .title-wrapper {
-        width: 30%;
+    .job {
+      width: 60%;
+      // margin: 1.5rem 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: 530px) {
+        width: 80%;
+      }
+
+      .title-container {
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        align-items: end;
-        margin-right: 1.5rem;
+        align-items: center;
+        margin-bottom: 2rem;
 
         img {
-          width: 180px;
+          width: 200px;
+
+          @media only screen and (max-width: 530px) {
+            width: 100px;
+          }
         }
 
         i {
-          font-size: 4rem;
+          font-size: 5rem;
+
+          @media only screen and (max-width: 530px) {
+            font-size: 2.5rem;
+          }
         }
 
-        h3 {
-          text-align: right;
+        .title-wrapper {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          // align-items: end;
+          // margin-right: 1.5rem;
+
+
+          h3 {
+            @include mixin.subtitle;
+            margin-bottom: 0.5rem;
+          }
         }
+
       }
 
+
       .job-descript {
-        width: 70%;
-        padding-left: 2rem;
+        // width: 70%;
+        // padding-left: 2rem;
 
         p:not(:last-child) {
           padding-bottom: 1rem;
@@ -55,8 +83,30 @@
         p {
           @include mixin.link;
           line-height: 130%;
+
+          .keyword {
+            font-weight: bold;
+            text-decoration: underline wavy var(--curly-brac);
+          }
         }
       }
     }
+
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .title-container {
+    flex-direction: column-reverse;
+
+    .title-wrapper {
+      width: 100% !important;
+      text-align: center;
+
+      h3 {
+        margin-top: 0.5rem;
+      }
+    }
+
   }
 }

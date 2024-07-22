@@ -9,6 +9,8 @@ function init() {
   const sentMsg = document.querySelector('.sent-msg')
   const sendBtn = document.querySelector('.contact-btn')
   const contactForm = document.querySelector('form')
+  const experienceJump = document.querySelector('.experience-jump')
+  console.log(experienceJump)
   // console.log(contactForm)
   // console.log(sentMsg)
   // console.log(sendBtn)
@@ -106,7 +108,7 @@ function init() {
       // console.log('menu closed')
     }
   }
-
+  
   function sectionChange() {
     let current
     sections.forEach(section => {
@@ -127,8 +129,16 @@ function init() {
       }
     })
   }
-
-  // * interests animation
+  
+  experienceJump.addEventListener('click', () => {
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: {
+        y: '.experience',
+        offsetY: () => window.innerWidth > 1020 ? 50 : 80
+      }
+    })
+  })
  
 
   // * event listeners

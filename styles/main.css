@@ -332,6 +332,28 @@
 .about .about-wrapper p:last-child {
   padding-bottom: 3rem;
 }
+.about .about-wrapper a {
+  margin: 2rem 1rem 4rem 1rem;
+}
+.about .about-wrapper a button {
+  font-family: var(--title-font);
+  font-size: 1.05rem;
+  color: var(--content-color);
+  background-color: var(--bg-color);
+  border: 2px solid var(--content-color);
+  border-radius: 10px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+}
+.about .about-wrapper a button i {
+  padding-right: 0.5rem;
+}
+.about .about-wrapper a button:hover {
+  color: var(--page-btn);
+  border-color: var(--page-btn);
+}
 .about .about-wrapper .tech-list {
   display: flex;
   flex-wrap: wrap;
@@ -571,31 +593,52 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.experience .jobs-wrapper .job {
-  width: 80%;
-  margin: 1.5rem 0 2rem 0;
-  display: flex;
+.experience .jobs-wrapper .job:not(:last-child) {
+  margin-bottom: 5rem;
 }
-.experience .jobs-wrapper .job .title-wrapper {
-  width: 30%;
+.experience .jobs-wrapper .job {
+  width: 60%;
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 530px) {
+  .experience .jobs-wrapper .job {
+    width: 80%;
+  }
+}
+.experience .jobs-wrapper .job .title-container {
+  display: flex;
   justify-content: space-between;
-  align-items: end;
-  margin-right: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-.experience .jobs-wrapper .job .title-wrapper img {
-  width: 180px;
+.experience .jobs-wrapper .job .title-container img {
+  width: 200px;
 }
-.experience .jobs-wrapper .job .title-wrapper i {
-  font-size: 4rem;
+@media only screen and (max-width: 530px) {
+  .experience .jobs-wrapper .job .title-container img {
+    width: 100px;
+  }
 }
-.experience .jobs-wrapper .job .title-wrapper h3 {
-  text-align: right;
+.experience .jobs-wrapper .job .title-container i {
+  font-size: 5rem;
 }
-.experience .jobs-wrapper .job .job-descript {
-  width: 70%;
-  padding-left: 2rem;
+@media only screen and (max-width: 530px) {
+  .experience .jobs-wrapper .job .title-container i {
+    font-size: 2.5rem;
+  }
+}
+.experience .jobs-wrapper .job .title-container .title-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.experience .jobs-wrapper .job .title-container .title-wrapper h3 {
+  font-family: var(--title-font);
+  font-size: var(--subtitle-size);
+  color: var(--subtitle-color);
+  margin-bottom: 0.5rem;
 }
 .experience .jobs-wrapper .job .job-descript p:not(:last-child) {
   padding-bottom: 1rem;
@@ -610,7 +653,24 @@
 .experience .jobs-wrapper .job .job-descript p a:hover {
   border: 1px solid var(--link-color);
 }
+.experience .jobs-wrapper .job .job-descript p .keyword {
+  font-weight: bold;
+  -webkit-text-decoration: underline wavy var(--curly-brac);
+          text-decoration: underline wavy var(--curly-brac);
+}
 
+@media only screen and (max-width: 530px) {
+  .title-container {
+    flex-direction: column-reverse;
+  }
+  .title-container .title-wrapper {
+    width: 100% !important;
+    text-align: center;
+  }
+  .title-container .title-wrapper h3 {
+    margin-top: 0.5rem;
+  }
+}
 .interests {
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -641,6 +701,11 @@
   align-items: center;
   width: 100%;
 }
+@media only screen and (max-width: 950px) {
+  .interests .interests-container .interest {
+    flex-direction: column;
+  }
+}
 .interests .interests-container .interest .interest-descript {
   width: 400px;
   text-align: center;
@@ -653,11 +718,15 @@
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (max-width: 950px) {
+  .interests .pics-wrapper {
+    flex-direction: row;
+  }
+}
 .interests .pics-wrapper .polaroid {
   margin: 1.5rem;
 }
 .interests .pics-wrapper .polaroid p {
-  position: absolute;
   text-align: center;
   width: 200px;
   color: black;
