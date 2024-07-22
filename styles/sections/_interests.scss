@@ -33,6 +33,7 @@
 
         p {
           line-height: 130%;
+          font-size: var(--content-size);
         }
       }
     }
@@ -51,7 +52,7 @@
       margin: 1.5rem;
 
       p {
-        // position: absolute;
+        position: absolute;
         text-align: center;
         width: 200px;
         color: black;

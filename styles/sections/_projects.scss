@@ -8,7 +8,6 @@
 
   h2 {
     @include mixin.subtitle;
-    // margin-bottom: 2rem;
   }
 
   .projects-container {
@@ -39,7 +38,6 @@
         margin: 0 2rem 0 4.5rem;
 
         @media only screen and (max-width: 530px) {
-          // transform: scale(0.7);
           width: 90%;
           font-size: 0.8rem;
         }
@@ -105,14 +103,12 @@
 
       .project-descript {
         width: 40%;
-        // height: 80vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // flex-grow: 1;
         margin: 0 4.5rem 0 2rem;
-        font-size: 1.05rem;
+        font-size: var(--content-size);
         text-align: center;
 
         @media only screen and (max-width: 530px) {
@@ -142,7 +138,7 @@
           }
 
           .tech-stack {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin: 1rem 0;
           }
         }
