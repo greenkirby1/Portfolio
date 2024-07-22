@@ -698,6 +698,9 @@
   flex-direction: column;
   align-items: center;
 }
+.interests .interests-container .interest:not(:last-child) {
+  margin-bottom: 5rem;
+}
 .interests .interests-container .interest {
   display: flex;
   justify-content: center;

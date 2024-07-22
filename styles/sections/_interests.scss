@@ -17,6 +17,10 @@
     flex-direction: column;
     align-items: center;
 
+    .interest:not(:last-child) {
+      margin-bottom: 5rem;
+    }
+
     .interest {
       display: flex;
       justify-content: center;
