@@ -10,6 +10,10 @@
   h3 {
     @include mixin.subtitle;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 530px) {
+      font-size: var(--small-subtitle);
+    }
   }
 
   .interests-container {
@@ -35,6 +39,10 @@
         width: 400px;
         text-align: center;
 
+        @media only screen and (max-width: 950px) {
+          width: var(--content-width);
+        }
+
         p {
           line-height: 130%;
           font-size: var(--content-size);
@@ -50,6 +58,10 @@
 
     @media only screen and (max-width: 950px) {
       flex-direction: row;
+    }
+
+    @media only screen and (max-width: 530px) {
+      flex-direction: column;
     }
 
     .polaroid {

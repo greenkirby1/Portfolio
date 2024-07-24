@@ -18,6 +18,10 @@
       @include mixin.subtitle;
       text-align: center;
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: 530px) {
+        font-size: var(--small-subtitle);
+      }
     }
 
     p {

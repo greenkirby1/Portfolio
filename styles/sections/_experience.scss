@@ -85,8 +85,8 @@
           line-height: 130%;
 
           .keyword {
-            font-weight: bold;
-            text-decoration: underline wavy var(--curly-brac);
+            font-family: var(--title-font);
+            text-decoration: underline 3px var(--curly-brac);
           }
         }
       }
@@ -95,7 +95,7 @@
   }
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 1050px) {
   .title-container {
     flex-direction: column-reverse;
 
@@ -108,5 +108,14 @@
       }
     }
 
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .experience {
+    h2,
+    h3 {
+      font-size: var(--small-subtitle) !important;
+    }
   }
 }

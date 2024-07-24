@@ -20,6 +20,7 @@
   --curly-brac: rgb(0, 89, 255);
   --property: rgb(98, 197, 255);
   --content-size: 1.2rem;
+  --small-subtitle: 2.6rem;
 }
 
 * {
@@ -136,6 +137,7 @@
   align-items: center;
   height: 80px;
   width: 100%;
+  color: black;
 }
 .small-nav .navbar .drop-menu {
   position: absolute;
@@ -156,7 +158,9 @@
   width: 200px;
   text-align: center;
 }
-.small-nav button, .small-nav .drop-menu {
+.small-nav button,
+.small-nav .drop-menu {
+  color: black;
   font-family: "Fablab";
   font-size: 1.1rem;
   border-radius: 10px;
@@ -166,7 +170,8 @@
   border: 2.5px solid var(--border-green);
   transition: box-shadow 0.3s ease-in-out;
 }
-.small-nav button:hover, .small-nav .drop-menu:hover {
+.small-nav button:hover,
+.small-nav .drop-menu:hover {
   box-shadow: 0px 5px 0px var(--border-green);
 }
 
@@ -177,7 +182,7 @@
 .active {
   border: 2.5px solid black !important;
   background-color: var(--bg-color) !important;
-  color: white;
+  color: white !important;
 }
 
 @media only screen and (max-width: 1020px) {
@@ -324,6 +329,12 @@
   color: var(--subtitle-color);
   text-align: center;
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 530px) {
+  .about .about-wrapper h2,
+  .about .about-wrapper h3 {
+    font-size: var(--small-subtitle);
+  }
 }
 .about .about-wrapper p {
   font-size: var(--content-size);
@@ -521,6 +532,7 @@
 .projects .projects-container .project-wrapper .project-descript p a {
   color: var(--link-color);
   text-decoration: none;
+  font-family: var(--title-font);
 }
 .projects .projects-container .project-wrapper .project-descript p a:hover {
   border: 1px solid var(--link-color);
@@ -529,6 +541,11 @@
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  .projects .projects-container .project-wrapper .project-descript .button-wrapper {
+    flex-direction: column;
+  }
 }
 .projects .projects-container .project-wrapper .project-descript .button-wrapper a {
   margin: 2rem 1rem;
@@ -552,6 +569,11 @@
   color: var(--page-btn);
   border-color: var(--page-btn);
 }
+@media only screen and (max-width: 500px) {
+  .projects .projects-container .project-wrapper .project-descript .button-wrapper a {
+    margin: 1rem;
+  }
+}
 
 @media only screen and (max-width: 950px) {
   .page-wrapper {
@@ -564,10 +586,11 @@
   }
 }
 @media only screen and (max-width: 530px) {
-  h2 {
+  .projects h2 {
     margin-bottom: 2rem;
+    font-size: var(--small-subtitle) !important;
   }
-  .project-wrapper {
+  .projects .project-wrapper {
     margin: 2rem 0 !important;
   }
 }
@@ -652,17 +675,18 @@
 .experience .jobs-wrapper .job .job-descript p a {
   color: var(--link-color);
   text-decoration: none;
+  font-family: var(--title-font);
 }
 .experience .jobs-wrapper .job .job-descript p a:hover {
   border: 1px solid var(--link-color);
 }
 .experience .jobs-wrapper .job .job-descript p .keyword {
-  font-weight: bold;
-  -webkit-text-decoration: underline wavy var(--curly-brac);
-          text-decoration: underline wavy var(--curly-brac);
+  font-family: var(--title-font);
+  -webkit-text-decoration: underline 3px var(--curly-brac);
+          text-decoration: underline 3px var(--curly-brac);
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 1050px) {
   .title-container {
     flex-direction: column-reverse;
   }
@@ -672,6 +696,12 @@
   }
   .title-container .title-wrapper h3 {
     margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .experience h2,
+  .experience h3 {
+    font-size: var(--small-subtitle) !important;
   }
 }
 .interests {
@@ -692,6 +722,12 @@
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 530px) {
+  .interests h2,
+  .interests h3 {
+    font-size: var(--small-subtitle);
+  }
 }
 .interests .interests-container {
   display: flex;
@@ -716,6 +752,11 @@
   width: 400px;
   text-align: center;
 }
+@media only screen and (max-width: 950px) {
+  .interests .interests-container .interest .interest-descript {
+    width: var(--content-width);
+  }
+}
 .interests .interests-container .interest .interest-descript p {
   line-height: 130%;
   font-size: var(--content-size);
@@ -728,6 +769,11 @@
 @media only screen and (max-width: 950px) {
   .interests .pics-wrapper {
     flex-direction: row;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .interests .pics-wrapper {
+    flex-direction: column;
   }
 }
 .interests .pics-wrapper .polaroid {
@@ -796,6 +842,11 @@
   font-size: var(--subtitle-size);
   color: var(--subtitle-color);
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 530px) {
+  .contacts h2 {
+    font-size: var(--small-subtitle);
+  }
 }
 .contacts .form-wrapper,
 .contacts .socials-container {
@@ -890,6 +941,15 @@
 .contacts .socials-wrapper {
   display: flex;
 }
+@media only screen and (max-width: 500px) {
+  .contacts .socials-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}
 .contacts .socials-wrapper a {
   margin: 2rem 1rem;
 }
@@ -911,4 +971,9 @@
 .contacts .socials-wrapper a button:hover {
   color: var(--page-btn);
   border-color: var(--page-btn);
+}
+@media only screen and (max-width: 500px) {
+  .contacts .socials-wrapper a {
+    margin: 0.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */

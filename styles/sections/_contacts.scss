@@ -9,6 +9,10 @@
   h2 {
     @include mixin.subtitle;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: 530px) {
+      font-size: var(--small-subtitle);
+    }
   }
 
   .form-wrapper,
@@ -83,9 +87,21 @@
   .socials-wrapper {
     display: flex;
 
+    @media only screen and (max-width: 500px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
     a {
       @include mixin.page-btn;
       margin: 2rem 1rem;
+
+      @media only screen and (max-width: 500px) {
+        margin: 0.5rem;
+      }
     }
   }
 }
